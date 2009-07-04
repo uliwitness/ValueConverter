@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>companyCountry</key>
+	<string>Germany</string>
+	<key>companyName</key>
+	<string>M. Uli Kusterer</string>
+	<key>fileBundleID</key>
+	<string>com.ulikusterer.valueconverter</string>
+	<key>fileReleaseDateD</key>
+	<integer>26</integer>
+	<key>fileReleaseDateM</key>
+	<integer>11</integer>
+	<key>fileReleaseDateOffset</key>
+	<string>+1:00</string>
+	<key>fileReleaseDateY</key>
+	<integer>2004</integer>
+	<key>fileType</key>
+	<string>APPL</string>
+	<key>padLocale</key>
+	<string>en</string>
+	<key>padVersion</key>
+	<string>4</string>
+	<key>productDescLong</key>
+	<string>This small utility app can convert between various values and number bases that programmers commonly need:
+
+- signed long (4 bytes, decimal)
+- unsigned long (4 bytes, hexadecimal, decimal, octal, binary)
+- signed short (decimal)
+- signed byte (decimal)
+- four-char-code (4 characters, 2 characters, 1 character)
+- bit field (up to four bytes as checkboxes
+
+If you've used Resorcerer's value converter, you should have an idea what this app does.</string>
+	<key>productDescShort</key>
+	<string>A small programmers' utility for converting between various values.</string>
+	<key>productDownloadURL</key>
+	<array>
+		<string>http://www.zathras.de/programming/apps/ValueConverter.zip</string>
+	</array>
+	<key>productIconURL</key>
+	<string>http://www.zathras.de/new_versions/ValueConverter.png</string>
+	<key>productKeywords</key>
+	<array>
+		<string>value</string>
+		<string>converter</string>
+		<string>programming</string>
+		<string>signed</string>
+		<string>unsigned</string>
+		<string>long</string>
+		<string>short</string>
+		<string>byte</string>
+		<string>binary</string>
+		<string>hexadecimal</string>
+		<string>octal</string>
+		<string>decimal</string>
+		<string>conversion</string>
+		<string>fourcharcode</string>
+		<string>file type</string>
+		<string>file creator</string>
+		<string>bit field</string>
+	</array>
+	<key>productLicense</key>
+	<string>Freeware</string>
+	<key>productName</key>
+	<string>ValueConverter</string>
+	<key>productOS</key>
+	<array>
+		<string>10.2</string>
+	</array>
+	<key>productPageURL</key>
+	<string>http://www.zathras.de/programming/macapplications.htm</string>
+	<key>productReleaseNotes</key>
+	<string>This version displays the four-char-codes using C-style escape sequences for control characters, and allows entering them that way, too. Also removed some unneeded menu items and updated tool tips for the items.</string>
+	<key>productVersion</key>
+	<string>1.0.1</string>
+</dict>
+</plist>

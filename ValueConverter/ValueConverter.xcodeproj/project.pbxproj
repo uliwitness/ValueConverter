@@ -1,0 +1,339 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 42;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3DAB441A0754DD5A0029022F /* ValueConverterAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAB44180754DD5A0029022F /* ValueConverterAppDelegate.m */; };
+		3DAE96D407576D2D00636416 /* ValueConverter.icns in Resources */ = {isa = PBXBuildFile; fileRef = 3DAE96D307576D2D00636416 /* ValueConverter.icns */; };
+		3DAE977D0757EDFB00636416 /* NSString+EscapeString.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAE977B0757EDFB00636416 /* NSString+EscapeString.m */; };
+		550ED62B0DC3B3DF0022269B /* ShiftRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 550ED6290DC3B3DF0022269B /* ShiftRight.png */; };
+		550ED62C0DC3B3DF0022269B /* ShiftLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 550ED62A0DC3B3DF0022269B /* ShiftLeft.png */; };
+		553022AC0DC36666001C24ED /* UKWindowBodyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553022AB0DC36666001C24ED /* UKWindowBodyView.m */; };
+		553022CC0DC36823001C24ED /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553022CB0DC36823001C24ED /* Carbon.framework */; };
+		553024850DC372DC001C24ED /* UKColumnRowFilledBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553024840DC372DC001C24ED /* UKColumnRowFilledBgView.m */; };
+		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
+		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
+		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
+		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
+		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
+		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		32CA4F630368D1EE00C91783 /* ValueConverter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueConverter_Prefix.pch; sourceTree = "<group>"; };
+		3DAB44180754DD5A0029022F /* ValueConverterAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.objc; path = ValueConverterAppDelegate.m; sourceTree = "<group>"; };
+		3DAB44190754DD5A0029022F /* ValueConverterAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; path = ValueConverterAppDelegate.h; sourceTree = "<group>"; };
+		3DAE96D307576D2D00636416 /* ValueConverter.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ValueConverter.icns; sourceTree = "<group>"; };
+		3DAE977A0757EDFB00636416 /* NSString+EscapeString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+EscapeString.h"; path = "../UliKit/NSString+EscapeString.h"; sourceTree = "<group>"; };
+		3DAE977B0757EDFB00636416 /* NSString+EscapeString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+EscapeString.m"; path = "../UliKit/NSString+EscapeString.m"; sourceTree = "<group>"; };
+		550ED6290DC3B3DF0022269B /* ShiftRight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShiftRight.png; path = Images/ShiftRight.png; sourceTree = "<group>"; };
+		550ED62A0DC3B3DF0022269B /* ShiftLeft.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ShiftLeft.png; path = Images/ShiftLeft.png; sourceTree = "<group>"; };
+		553022AA0DC36666001C24ED /* UKWindowBodyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UKWindowBodyView.h; path = ../UliKit/UKWindowBodyView.h; sourceTree = SOURCE_ROOT; };
+		553022AB0DC36666001C24ED /* UKWindowBodyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UKWindowBodyView.m; path = ../UliKit/UKWindowBodyView.m; sourceTree = SOURCE_ROOT; };
+		553022CB0DC36823001C24ED /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		553024830DC372DC001C24ED /* UKColumnRowFilledBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UKColumnRowFilledBgView.h; path = ../UliKit/UKColumnRowFilledBgView.h; sourceTree = SOURCE_ROOT; };
+		553024840DC372DC001C24ED /* UKColumnRowFilledBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UKColumnRowFilledBgView.m; path = ../UliKit/UKColumnRowFilledBgView.m; sourceTree = SOURCE_ROOT; };
+		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		8D1107320486CEB800E47090 /* ValueConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D11072E0486CEB800E47090 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				553022CC0DC36823001C24ED /* Carbon.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		080E96DDFE201D6D7F000001 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3DAB44190754DD5A0029022F /* ValueConverterAppDelegate.h */,
+				3DAB44180754DD5A0029022F /* ValueConverterAppDelegate.m */,
+				553025F70DC37F5F001C24ED /* UliKit */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
+				553022CB0DC36823001C24ED /* Carbon.framework */,
+			);
+			name = "Linked Frameworks";
+			sourceTree = "<group>";
+		};
+		1058C7A2FEA54F0111CA2CBB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				29B97325FDCFA39411CA2CEA /* Foundation.framework */,
+				29B97324FDCFA39411CA2CEA /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107320486CEB800E47090 /* ValueConverter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* ValueConverter */ = {
+			isa = PBXGroup;
+			children = (
+				080E96DDFE201D6D7F000001 /* Classes */,
+				29B97315FDCFA39411CA2CEA /* Other Sources */,
+				29B97317FDCFA39411CA2CEA /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = ValueConverter;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				32CA4F630368D1EE00C91783 /* ValueConverter_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* main.m */,
+			);
+			name = "Other Sources";
+			sourceTree = "<group>";
+		};
+		29B97317FDCFA39411CA2CEA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8D1107310486CEB800E47090 /* Info.plist */,
+				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
+				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				3DAE96D307576D2D00636416 /* ValueConverter.icns */,
+				550ED6290DC3B3DF0022269B /* ShiftRight.png */,
+				550ED62A0DC3B3DF0022269B /* ShiftLeft.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */,
+				1058C7A2FEA54F0111CA2CBB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		553025F70DC37F5F001C24ED /* UliKit */ = {
+			isa = PBXGroup;
+			children = (
+				3DAE977A0757EDFB00636416 /* NSString+EscapeString.h */,
+				3DAE977B0757EDFB00636416 /* NSString+EscapeString.m */,
+				553022AA0DC36666001C24ED /* UKWindowBodyView.h */,
+				553022AB0DC36666001C24ED /* UKWindowBodyView.m */,
+				553024830DC372DC001C24ED /* UKColumnRowFilledBgView.h */,
+				553024840DC372DC001C24ED /* UKColumnRowFilledBgView.m */,
+			);
+			name = UliKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8D1107260486CEB800E47090 /* ValueConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D77746009C112D800F1FADB /* Build configuration list for PBXNativeTarget "ValueConverter" */;
+			buildPhases = (
+				8D11072C0486CEB800E47090 /* Sources */,
+				8D11072E0486CEB800E47090 /* Frameworks */,
+				8D1107290486CEB800E47090 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ValueConverter;
+			productInstallPath = "$(HOME)/Applications";
+			productName = ValueConverter;
+			productReference = 8D1107320486CEB800E47090 /* ValueConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 3D77746409C112D800F1FADB /* Build configuration list for PBXProject "ValueConverter" */;
+			compatibilityVersion = "Xcode 2.4";
+			hasScannedForEncodings = 1;
+			mainGroup = 29B97314FDCFA39411CA2CEA /* ValueConverter */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D1107260486CEB800E47090 /* ValueConverter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8D1107290486CEB800E47090 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
+				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				3DAE96D407576D2D00636416 /* ValueConverter.icns in Resources */,
+				550ED62B0DC3B3DF0022269B /* ShiftRight.png in Resources */,
+				550ED62C0DC3B3DF0022269B /* ShiftLeft.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D11072C0486CEB800E47090 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D11072D0486CEB800E47090 /* main.m in Sources */,
+				3DAB441A0754DD5A0029022F /* ValueConverterAppDelegate.m in Sources */,
+				3DAE977D0757EDFB00636416 /* NSString+EscapeString.m in Sources */,
+				553022AC0DC36666001C24ED /* UKWindowBodyView.m in Sources */,
+				553024850DC372DC001C24ED /* UKColumnRowFilledBgView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		089C165CFE840E0CC02AAC07 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				089C165DFE840E0CC02AAC07 /* English */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29B97319FDCFA39411CA2CEA /* English */,
+			);
+			name = MainMenu.nib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3D77746109C112D800F1FADB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ValueConverter_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = ValueConverter;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = YES;
+			};
+			name = Development;
+		};
+		3D77746209C112D800F1FADB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					i386,
+					ppc,
+				);
+				COPY_PHASE_STRIP = YES;
+				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ValueConverter_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = ValueConverter;
+				WRAPPER_EXTENSION = app;
+				ZERO_LINK = NO;
+			};
+			name = Deployment;
+		};
+		3D77746309C112D800F1FADB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = ValueConverter_Prefix.pch;
+				INFOPLIST_FILE = Info.plist;
+				INSTALL_PATH = "$(HOME)/Applications";
+				PRODUCT_NAME = ValueConverter;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Default;
+		};
+		3D77746509C112D800F1FADB /* Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+			};
+			name = Development;
+		};
+		3D77746609C112D800F1FADB /* Deployment */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+			};
+			name = Deployment;
+		};
+		3D77746709C112D800F1FADB /* Default */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_C_LANGUAGE_STANDARD = c99;
+			};
+			name = Default;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3D77746009C112D800F1FADB /* Build configuration list for PBXNativeTarget "ValueConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D77746109C112D800F1FADB /* Development */,
+				3D77746209C112D800F1FADB /* Deployment */,
+				3D77746309C112D800F1FADB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+		3D77746409C112D800F1FADB /* Build configuration list for PBXProject "ValueConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D77746509C112D800F1FADB /* Development */,
+				3D77746609C112D800F1FADB /* Deployment */,
+				3D77746709C112D800F1FADB /* Default */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Default;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}
