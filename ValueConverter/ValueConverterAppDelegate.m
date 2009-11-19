@@ -24,6 +24,9 @@
 
 @implementation ValueConverterAppDelegate
 
+NSString*		encodingNames[] = { @"MacRoman", @"UTF-8", @"ISO Latin 1", nil };
+NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncoding, NSISOLatin1StringEncoding, 0 };
+
 // -----------------------------------------------------------------------------
 //  awakeFromNib:
 //      Make sure all text fields are synched to our value immediately after
@@ -68,9 +71,20 @@
     if( num )
         clearByteHighBytes = [num boolValue];
     
+    num = [ud objectForKey: @"BitshiftAmount"];
+    if( num )
+        bitshiftAmount = [num intValue];
+	if( bitshiftAmount < 1 || bitshiftAmount >= 64 )
+		bitshiftAmount = 1;
+    
     NSData* theData = [ud objectForKey: @"LastUsedValueBytes"];
     if( theData )
         [theData getBytes: &value length: 8];
+	
+	charsEncoding = NSMacOSRomanStringEncoding;
+    num = [ud objectForKey: @"CharsEncoding"];
+    if( num )
+        charsEncoding = [num intValue];
     
     // Update UI:
     [uppercaseEscapesSwitch setState: uppercaseEscapes];
@@ -78,6 +92,17 @@
     [clearLongLongHighLongSwitch setState: clearLongLongHighLong];
     [clearShortHighWordSwitch setState: clearShortHighWord];
     [clearByteHighBytesSwitch setState: clearByteHighBytes];
+    [bitshiftAmountField setIntValue: bitshiftAmount];
+	
+	// Build & select encoding popup:
+	int					indexToSelect = 0;
+	for( int x = 0; encodingNames[x] != nil; x++ )
+	{
+		[encodingPopup addItemWithTitle: encodingNames[x]];
+		if( charsEncoding == encodingConstants[x] )
+			indexToSelect = x;
+	}
+	[encodingPopup selectItemAtIndex: indexToSelect];
 	
 	// Endian switch starts out with native endianness:
 	[endianSwitch setSelectedSegment: DONT_CONVERT_SEGMENT];
@@ -115,6 +140,9 @@
     [ud setBool: clearShortHighWord forKey: @"ClearLongLongHighLong"];
     [ud setBool: clearShortHighWord forKey: @"ClearShortHighWord"];
     [ud setBool: clearByteHighBytes forKey: @"ClearByteHighBytes"];
+	
+	[ud setInteger: bitshiftAmount forKey: @"BitshiftAmount"];
+	[ud setInteger: charsEncoding forKey: @"CharsEncoding"];
 }
 
 
@@ -195,7 +223,10 @@
 {
     char    str[9] = { 0 };
     
-    [[[sender stringValue] unescapedString] getCString: str maxLength: sizeof(str) encoding: NSMacOSRomanStringEncoding];
+	NS_DURING
+		[[[sender stringValue] unescapedString] getCString: str maxLength: sizeof(str) encoding: charsEncoding];
+	NS_HANDLER
+	NS_ENDHANDLER
     memmove( &value, str, 8 );
     
     [self refreshDisplay: sender];
@@ -465,7 +496,7 @@
 		if( x == 21 )
 			currDig = (shifted & 0x1);
         char        vals[8] = { '0', '1', '2', '3', '4', '5', '6', '7' };
-        [str insertString: [NSString stringWithCString: (vals +currDig) length: 1] atIndex: 0];
+        [str insertString: [[[NSString alloc] initWithBytes: (vals +currDig) length: 1 encoding: NSASCIIStringEncoding] autorelease] atIndex: 0];
     }
     
 	// Remove leading zeroes:
@@ -510,7 +541,7 @@
         unsigned    shifted = (n >> x);
         int         currDig = (shifted & 0x1);
         char        vals[2] = { '0', '1' };
-        [str insertString: [NSString stringWithCString: (vals +currDig) length: 1] atIndex: 0];
+        [str insertString: [[[NSString alloc] initWithBytes: (vals +currDig) length: 1 encoding: NSASCIIStringEncoding] autorelease] atIndex: 0];
     }
     
 	// Remove leading zeroes:
@@ -582,7 +613,13 @@
 	{
 		char str[9] = { 0 };
 		memmove( str, &value, 8 );
-		NSString*   ecc = [[[NSString alloc] initWithBytes: str length: 8 encoding: NSMacOSRomanStringEncoding] autorelease];
+		NSString*   ecc = @"";
+		NS_DURING
+			ecc = [[[NSString alloc] initWithBytes: str length: 8 encoding: charsEncoding] autorelease];
+		NS_HANDLER
+		NS_ENDHANDLER
+		if( !ecc )
+			ecc = @"";
 		[eightCharCodeField setStringValue: [ecc escapedStringUppercase: uppercaseEscapes]];
     }
 	
@@ -655,19 +692,46 @@
 	unsigned long long		theValue = (BYTE_ORDER == LITTLE_ENDIAN) ? NSSwapLongLong(value) : value;
 	if( dir > 0 )
 	{
-		unsigned long long	oldLowBit = (theValue & 1LL) << 63LL;
-		theValue >>= 1LL;
-		theValue |= oldLowBit;
+		for( int x = 0; x < bitshiftAmount; x++ )
+		{
+			unsigned long long	oldLowBit = (theValue & 1LL) << 63LL;
+			theValue >>= 1LL;
+			theValue |= oldLowBit;
+		}
 	}
 	else
 	{
-		unsigned long long	oldHiBit = (theValue & 0x8000000000000000LL) >> 63LL;
-		theValue <<= 1LL;
-		theValue |= oldHiBit;
+		for( int x = 0; x < bitshiftAmount; x++ )
+		{
+			unsigned long long	oldHiBit = (theValue & 0x8000000000000000LL) >> 63LL;
+			theValue <<= 1LL;
+			theValue |= oldHiBit;
+		}
 	}
 	value = (BYTE_ORDER == LITTLE_ENDIAN) ? NSSwapLongLong(theValue) : theValue;
 	
 	[self refreshDisplay: self];
+}
+
+
+-(IBAction)	takeBitshiftAmountFrom: (id)sender
+{
+	bitshiftAmount = [sender intValue];
+	if( bitshiftAmount < 1 )
+		bitshiftAmount = 1;
+	if( bitshiftAmount >= 64 )
+		bitshiftAmount = 1;
+	
+	[bitshiftAmountField setIntValue: bitshiftAmount];
+}
+
+
+-(IBAction)	takeEncodingIndexFrom: (id)sender
+{
+	int		idx = [sender indexOfSelectedItem];
+	charsEncoding = encodingConstants[idx];
+	
+	[self takeEightCharCodeStringFrom: eightCharCodeField];
 }
 
 @end

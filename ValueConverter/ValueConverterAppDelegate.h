@@ -42,6 +42,8 @@
     IBOutlet NSButton				*clearShortHighWordSwitch;
     IBOutlet NSButton				*clearByteHighBytesSwitch;
 	IBOutlet NSSegmentedControl		*endianSwitch;
+    IBOutlet NSTextField			*bitshiftAmountField;
+	IBOutlet NSPopUpButton			*encodingPopup;
     
     unsigned long long				value;					// The actual 8-byte value that is displayed in the window.
     BOOL							uppercaseEscapes;		// Use uppercase A's etc. in hex escape sequences?
@@ -50,6 +52,8 @@
     BOOL							clearShortHighWord;		// Set the high word to 0 when editing a short?
     BOOL							clearByteHighBytes;		// Set the 3 high bytes to 0 when editing a byte?
 	BOOL							doEndianConversion;		// Do endian-conversion instead of using native endianness?
+	int								bitshiftAmount;			// How much to bitshift on one button press.
+	NSStringEncoding				charsEncoding;			// Text encoding to use for display as chars.
 }
 
 // Various UI actions that change value:
@@ -79,5 +83,7 @@
 -(IBAction) toggleClearShortHighWord: (id)sender;
 -(IBAction) toggleClearByteHighBytes: (id)sender;
 -(IBAction)	toggleEndianness: (id)sender;
+-(IBAction)	takeBitshiftAmountFrom: (id)sender;
+-(IBAction)	takeEncodingIndexFrom: (id)sender;
 
 @end
