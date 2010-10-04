@@ -148,7 +148,8 @@
 				553024840DC372DC001C24ED /* UKColumnRowFilledBgView.m */,
 			);
 			name = UliKit;
-			sourceTree = "<group>";
+			path = ../UliKit;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
