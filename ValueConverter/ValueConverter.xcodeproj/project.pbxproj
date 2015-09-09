@@ -15,7 +15,7 @@
 		553022AC0DC36666001C24ED /* UKWindowBodyView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553022AB0DC36666001C24ED /* UKWindowBodyView.m */; };
 		553022CC0DC36823001C24ED /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553022CB0DC36823001C24ED /* Carbon.framework */; };
 		553024850DC372DC001C24ED /* UKColumnRowFilledBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 553024840DC372DC001C24ED /* UKColumnRowFilledBgView.m */; };
-		8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */ = {isa = PBXBuildFile; fileRef = 29B97318FDCFA39411CA2CEA /* MainMenu.nib */; };
+		55E3CAE91BA0508E002CE58D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 55E3CAE71BA0508E002CE58D /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
@@ -25,7 +25,6 @@
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97316FDCFA39411CA2CEA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		29B97319FDCFA39411CA2CEA /* English */ = {isa = PBXFileReference; lastKnownFileType = wrapper.nib; name = English; path = English.lproj/MainMenu.nib; sourceTree = "<group>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
 		32CA4F630368D1EE00C91783 /* ValueConverter_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ValueConverter_Prefix.pch; sourceTree = "<group>"; };
@@ -41,6 +40,7 @@
 		553022CB0DC36823001C24ED /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
 		553024830DC372DC001C24ED /* UKColumnRowFilledBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UKColumnRowFilledBgView.h; path = ../UliKit/UKColumnRowFilledBgView.h; sourceTree = SOURCE_ROOT; };
 		553024840DC372DC001C24ED /* UKColumnRowFilledBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = UKColumnRowFilledBgView.m; path = ../UliKit/UKColumnRowFilledBgView.m; sourceTree = SOURCE_ROOT; };
+		55E3CAE81BA0508E002CE58D /* English */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = English; path = English.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* ValueConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -120,7 +120,7 @@
 			children = (
 				8D1107310486CEB800E47090 /* Info.plist */,
 				089C165CFE840E0CC02AAC07 /* InfoPlist.strings */,
-				29B97318FDCFA39411CA2CEA /* MainMenu.nib */,
+				55E3CAE71BA0508E002CE58D /* MainMenu.xib */,
 				3DAE96D307576D2D00636416 /* ValueConverter.icns */,
 				550ED6290DC3B3DF0022269B /* ShiftRight.png */,
 				550ED62A0DC3B3DF0022269B /* ShiftLeft.png */,
@@ -177,12 +177,15 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = 3D77746409C112D800F1FADB /* Build configuration list for PBXProject "ValueConverter" */;
 			compatibilityVersion = "Xcode 2.4";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				en,
+				English,
 			);
 			mainGroup = 29B97314FDCFA39411CA2CEA /* ValueConverter */;
 			projectDirPath = "";
@@ -198,8 +201,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8D11072A0486CEB800E47090 /* MainMenu.nib in Resources */,
 				8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */,
+				55E3CAE91BA0508E002CE58D /* MainMenu.xib in Resources */,
 				3DAE96D407576D2D00636416 /* ValueConverter.icns in Resources */,
 				550ED62B0DC3B3DF0022269B /* ShiftRight.png in Resources */,
 				550ED62C0DC3B3DF0022269B /* ShiftLeft.png in Resources */,
@@ -232,12 +235,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		29B97318FDCFA39411CA2CEA /* MainMenu.nib */ = {
+		55E3CAE71BA0508E002CE58D /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				29B97319FDCFA39411CA2CEA /* English */,
+				55E3CAE81BA0508E002CE58D /* English */,
 			);
-			name = MainMenu.nib;
+			name = MainMenu.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
