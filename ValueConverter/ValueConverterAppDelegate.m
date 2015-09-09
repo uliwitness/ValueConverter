@@ -591,9 +591,9 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
     if( sender != unsignedLongLongField )
 		[unsignedLongLongField setStringValue: [NSString stringWithFormat: @"%llu",possiblySwappedLL]];
     if( sender != signedLongField )
-		[signedLongField setStringValue: [NSString stringWithFormat: @"%d", possiblySwappedL]];
+		[signedLongField setStringValue: [NSString stringWithFormat: @"%ld", possiblySwappedL]];
 	if( sender != unsignedLongField )
-		[unsignedLongField setStringValue: [NSString stringWithFormat: @"%u", possiblySwappedL]];
+		[unsignedLongField setStringValue: [NSString stringWithFormat: @"%lu", possiblySwappedL]];
     if( sender != octalLongLongField )
 		[octalLongLongField setStringValue: [self octalString: possiblySwappedLL]];
     if( sender != floatField )
