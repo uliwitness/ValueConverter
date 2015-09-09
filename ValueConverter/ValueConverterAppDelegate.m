@@ -454,7 +454,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 
 // -----------------------------------------------------------------------------
 //  takeFloatStringFrom:
-//      Generate an (unsigned) float based on the sender's string value.
+//      Generate a float based on the sender's string value.
 //
 //  REVISIONS:
 //      2005-01-09  UK  Fixed comment.
@@ -473,6 +473,26 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
  	if( doEndianConversion )
 		(*(NSSwappedFloat*)&n) = NSSwapFloat( *(NSSwappedFloat*)&n);
 	((float*)&value)[0] = n;
+    
+   [self refreshDisplay: sender];
+}
+
+
+// -----------------------------------------------------------------------------
+//  takeDoubleStringFrom:
+//      Generate a double based on the sender's string value.
+// -----------------------------------------------------------------------------
+
+-(IBAction) takeDoubleStringFrom: (id)sender
+{
+    const char*   cstr = [[sender stringValue] cStringUsingEncoding: NSASCIIStringEncoding];
+    char*         edptr = (char*) cstr +strlen(cstr);
+    
+    double n = strtod( cstr, &edptr );
+    
+ 	if( doEndianConversion )
+		(*(NSSwappedDouble*)&n) = NSSwapDouble( *(NSSwappedDouble*)&n);
+	(*(double*)&value) = n;
     
    [self refreshDisplay: sender];
 }
@@ -601,6 +621,8 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 	unsigned char		theCh = (*(unsigned char*)&value);
 	NSSwappedFloat		swappedF = NSSwapFloat((*(NSSwappedFloat*)&value));
 	float				possiblySwappedF = doEndianConversion? (*(float*)&swappedF) : (*(float*)&value);
+	NSSwappedDouble		swappedD = NSSwapDouble((*(NSSwappedDouble*)&value));
+	float				possiblySwappedD = doEndianConversion? (*(double*)&swappedF) : (*(float*)&value);
 	if( sender != binaryLongLongField )
 		[binaryLongLongField setStringValue: [self binaryString: possiblySwappedLL]];
     if( sender != hexLongLongField )
@@ -617,6 +639,8 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 		[octalLongLongField setStringValue: [self octalString: possiblySwappedLL]];
     if( sender != floatField )
 		[floatField setStringValue: [NSString stringWithFormat: @"%f", possiblySwappedF]];
+    if( sender != doubleField )
+		[doubleField setStringValue: [NSString stringWithFormat: @"%f", possiblySwappedD]];
     
     if( sender != signedShortField )
 		[signedShortField setStringValue: [NSString stringWithFormat: @"%d", possiblySwappedS]];

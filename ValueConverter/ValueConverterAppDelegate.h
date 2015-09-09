@@ -54,6 +54,7 @@
     IBOutlet NSTextField			*signedByteField;
     IBOutlet NSTextField			*unsignedByteField;
     IBOutlet NSTextField			*floatField;
+    IBOutlet NSTextField			*doubleField;
     
     IBOutlet NSButton				*uppercaseEscapesSwitch;
     IBOutlet NSButton				*uppercaseHexSwitch;
