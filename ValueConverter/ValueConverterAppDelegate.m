@@ -218,7 +218,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 - (IBAction)takeBinaryLongLongStringFrom:(id)sender
 {
     NSString*   str = [sender stringValue];
-    int         x, bx = 0;
+    NSInteger	x, bx = 0;
     
     value = 0;
     
@@ -256,7 +256,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 - (IBAction)takeHexLongLongStringFrom:(id)sender
 {
     NSString*	str = [sender stringValue];
-    int			x, hx = 0;
+    NSInteger	x, hx = 0;
     
     value = 0;
     
@@ -279,7 +279,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 - (IBAction)takeOctalLongLongStringFrom:(id)sender
 {
     NSString*			str = [sender stringValue];
-    int					x, ox = 0;
+    NSInteger			x, ox = 0;
     
     value = 0;
     
@@ -306,7 +306,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 		((long*)&value)[1] = 0;
 	
 	if( doEndianConversion )
-		n = NSSwapLong(n);
+		n = (int)NSSwapLong(n);
     
 	((long*)&value)[0] = n;
 	
@@ -407,7 +407,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 - (IBAction)takeUnsignedLongStringFrom:(id)sender
 {
     NSString*		str = [sender stringValue];
-    int				x, dx = 0;
+    NSInteger		x, dx = 0;
 	unsigned long	n = 0;
     
 	if( clearLongLongHighLong )
@@ -433,7 +433,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 - (IBAction)takeUnsignedLongLongStringFrom:(id)sender
 {
     NSString*   str = [sender stringValue];
-    int         x, dx = 0;
+    NSInteger	x, dx = 0;
     
     value = 0;
     
@@ -577,7 +577,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
     
     for( x = 0; x < 64; x++ )
     {
-        unsigned    shifted = (n >> x);
+        unsigned    shifted = (unsigned)(n >> x);
         int         currDig = (shifted & 0x1);
         char        vals[2] = { '0', '1' };
         [str insertString: [[[NSString alloc] initWithBytes: (vals +currDig) length: 1 encoding: NSASCIIStringEncoding] autorelease] atIndex: 0];
@@ -676,7 +676,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 		
 		for( x = 0; x < 64; x++ )
 		{
-			unsigned			shifted = (num >> x);
+			unsigned			shifted = (unsigned)(num >> x);
 			int					row = (x / 16);
 			int					col = (x % 16);
 			int					yRow = 3-row;
@@ -730,7 +730,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 
 -(IBAction)	shiftInDirection: (id)sender
 {
-	int	dir = [sender tag];
+	NSInteger	dir = [sender tag];
 	unsigned long long		theValue = (BYTE_ORDER == LITTLE_ENDIAN) ? NSSwapLongLong(value) : value;
 	if( dir > 0 )
 	{
@@ -770,7 +770,7 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 
 -(IBAction)	takeEncodingIndexFrom: (id)sender
 {
-	int		idx = [sender indexOfSelectedItem];
+	NSInteger	idx = [sender indexOfSelectedItem];
 	charsEncoding = encodingConstants[idx];
 	
 	[self takeEightCharCodeStringFrom: eightCharCodeField];
