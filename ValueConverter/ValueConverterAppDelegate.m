@@ -621,7 +621,6 @@ NSInteger		encodingConstants[] = { NSMacOSRomanStringEncoding, NSUTF8StringEncod
 	unsigned char		theCh = (*(unsigned char*)&value);
 	NSSwappedFloat		swappedF = NSSwapFloat((*(NSSwappedFloat*)&value));
 	float				possiblySwappedF = doEndianConversion? (*(float*)&swappedF) : (*(float*)&value);
-	NSSwappedDouble		swappedD = NSSwapDouble((*(NSSwappedDouble*)&value));
 	float				possiblySwappedD = doEndianConversion? (*(double*)&swappedF) : (*(float*)&value);
 	if( sender != binaryLongLongField )
 		[binaryLongLongField setStringValue: [self binaryString: possiblySwappedLL]];
