@@ -16,9 +16,9 @@
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="51" y="240" width="479" height="605"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1280" height="777"/>
-            <value key="minSize" type="size" width="479" height="580"/>
+            <value key="minSize" type="size" width="479" height="605"/>
             <view key="contentView" id="2">
-                <rect key="frame" x="0.0" y="-1" width="479" height="605"/>
+                <rect key="frame" x="0.0" y="0.0" width="479" height="605"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <segmentedControl verticalHuggingPriority="750" id="437">
