@@ -24,8 +24,8 @@ final class ValueConverter2Tests: XCTestCase {
 	}
 	
     func testExample() throws {
-		let valueModel = TestModel()
-		var fmt = Int32Format(model: valueModel.$model)
+		var valueModel = TestModel()
+		var fmt = Int32View(rawBytes: valueModel.$model.rawBytes)
 		fmt.value = 500
 		print("\(fmt.value)")
 		valueModel.model.rawBytes = [0, 1, 0, 0]

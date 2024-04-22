@@ -1,7 +1,7 @@
 import SwiftUI
 
 struct ContentView: View {
-	@Binding var model: ValueModel
+	@Binding var model: ViewModel
 	
     var body: some View {
         VStack {
@@ -9,14 +9,14 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-			Int32Format(model: $model)
-			UInt32Format(model: $model)
+			Int32View(model: $model)
+			UInt32View(model: $model)
         }
         .padding()
     }
 }
 
 #Preview {
-	@State var model = ValueModel()
+	@State var model = ContentView.ViewModel()
     return ContentView(model: $model)
 }

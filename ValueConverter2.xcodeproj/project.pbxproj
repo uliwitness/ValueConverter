@@ -12,21 +12,13 @@
 		559287592BD2FEFA001F2368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559287582BD2FEFA001F2368 /* Assets.xcassets */; };
 		5592875C2BD2FEFA001F2368 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5592875B2BD2FEFA001F2368 /* Preview Assets.xcassets */; };
 		559287672BD2FEFB001F2368 /* ValueConverter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */; };
-		559287712BD2FEFB001F2368 /* ValueConverter2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287702BD2FEFB001F2368 /* ValueConverter2UITests.swift */; };
-		559287732BD2FEFB001F2368 /* ValueConverter2UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287722BD2FEFB001F2368 /* ValueConverter2UITestsLaunchTests.swift */; };
-		559287802BD2FFF5001F2368 /* ValueFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592877F2BD2FFF5001F2368 /* ValueFormat.swift */; };
-		559287822BD31B0E001F2368 /* Int32Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287812BD31B0E001F2368 /* Int32Format.swift */; };
+		559287802BD2FFF5001F2368 /* ByteConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592877F2BD2FFF5001F2368 /* ByteConversion.swift */; };
+		559287822BD31B0E001F2368 /* Int32View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287812BD31B0E001F2368 /* Int32View.swift */; };
+		559287862BD3E11F001F2368 /* ContentView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		559287632BD2FEFB001F2368 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 559287492BD2FEF8001F2368 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 559287502BD2FEF8001F2368;
-			remoteInfo = ValueConverter2;
-		};
-		5592876D2BD2FEFB001F2368 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 559287492BD2FEF8001F2368 /* Project object */;
 			proxyType = 1;
@@ -44,11 +36,11 @@
 		5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ValueConverter2.entitlements; sourceTree = "<group>"; };
 		559287622BD2FEFB001F2368 /* ValueConverter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueConverter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2Tests.swift; sourceTree = "<group>"; };
-		5592876C2BD2FEFB001F2368 /* ValueConverter2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueConverter2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		559287702BD2FEFB001F2368 /* ValueConverter2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2UITests.swift; sourceTree = "<group>"; };
 		559287722BD2FEFB001F2368 /* ValueConverter2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5592877F2BD2FFF5001F2368 /* ValueFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueFormat.swift; sourceTree = "<group>"; };
-		559287812BD31B0E001F2368 /* Int32Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int32Format.swift; sourceTree = "<group>"; };
+		5592877F2BD2FFF5001F2368 /* ByteConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteConversion.swift; sourceTree = "<group>"; };
+		559287812BD31B0E001F2368 /* Int32View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int32View.swift; sourceTree = "<group>"; };
+		559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,13 +52,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5592875F2BD2FEFB001F2368 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		559287692BD2FEFB001F2368 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -91,7 +76,6 @@
 			children = (
 				559287512BD2FEF8001F2368 /* ValueConverter2.app */,
 				559287622BD2FEFB001F2368 /* ValueConverter2Tests.xctest */,
-				5592876C2BD2FEFB001F2368 /* ValueConverter2UITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,8 +85,9 @@
 			children = (
 				559287542BD2FEF8001F2368 /* ValueConverter2App.swift */,
 				559287562BD2FEF8001F2368 /* ContentView.swift */,
-				5592877F2BD2FFF5001F2368 /* ValueFormat.swift */,
-				559287812BD31B0E001F2368 /* Int32Format.swift */,
+				559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */,
+				5592877F2BD2FFF5001F2368 /* ByteConversion.swift */,
+				559287812BD31B0E001F2368 /* Int32View.swift */,
 				559287582BD2FEFA001F2368 /* Assets.xcassets */,
 				5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */,
 				5592875A2BD2FEFA001F2368 /* Preview Content */,
@@ -173,24 +158,6 @@
 			productReference = 559287622BD2FEFB001F2368 /* ValueConverter2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5592876B2BD2FEFB001F2368 /* ValueConverter2UITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5592877C2BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter2UITests" */;
-			buildPhases = (
-				559287682BD2FEFB001F2368 /* Sources */,
-				559287692BD2FEFB001F2368 /* Frameworks */,
-				5592876A2BD2FEFB001F2368 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5592876E2BD2FEFB001F2368 /* PBXTargetDependency */,
-			);
-			name = ValueConverter2UITests;
-			productName = ValueConverter2UITests;
-			productReference = 5592876C2BD2FEFB001F2368 /* ValueConverter2UITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,10 +172,6 @@
 						CreatedOnToolsVersion = 15.3;
 					};
 					559287612BD2FEFB001F2368 = {
-						CreatedOnToolsVersion = 15.3;
-						TestTargetID = 559287502BD2FEF8001F2368;
-					};
-					5592876B2BD2FEFB001F2368 = {
 						CreatedOnToolsVersion = 15.3;
 						TestTargetID = 559287502BD2FEF8001F2368;
 					};
@@ -229,7 +192,6 @@
 			targets = (
 				559287502BD2FEF8001F2368 /* ValueConverter2 */,
 				559287612BD2FEFB001F2368 /* ValueConverter2Tests */,
-				5592876B2BD2FEFB001F2368 /* ValueConverter2UITests */,
 			);
 		};
 /* End PBXProject section */
@@ -251,13 +213,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		5592876A2BD2FEFB001F2368 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -265,9 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559287862BD3E11F001F2368 /* ContentView+ViewModel.swift in Sources */,
 				559287572BD2FEF8001F2368 /* ContentView.swift in Sources */,
-				559287822BD31B0E001F2368 /* Int32Format.swift in Sources */,
-				559287802BD2FFF5001F2368 /* ValueFormat.swift in Sources */,
+				559287822BD31B0E001F2368 /* Int32View.swift in Sources */,
+				559287802BD2FFF5001F2368 /* ByteConversion.swift in Sources */,
 				559287552BD2FEF8001F2368 /* ValueConverter2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,15 +236,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		559287682BD2FEFB001F2368 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				559287732BD2FEFB001F2368 /* ValueConverter2UITestsLaunchTests.swift in Sources */,
-				559287712BD2FEFB001F2368 /* ValueConverter2UITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -296,11 +243,6 @@
 			isa = PBXTargetDependency;
 			target = 559287502BD2FEF8001F2368 /* ValueConverter2 */;
 			targetProxy = 559287632BD2FEFB001F2368 /* PBXContainerItemProxy */;
-		};
-		5592876E2BD2FEFB001F2368 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 559287502BD2FEF8001F2368 /* ValueConverter2 */;
-			targetProxy = 5592876D2BD2FEFB001F2368 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -515,40 +457,6 @@
 			};
 			name = Release;
 		};
-		5592877D2BD2FEFB001F2368 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RCKXACKVZS;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter2UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = ValueConverter2;
-			};
-			name = Debug;
-		};
-		5592877E2BD2FEFB001F2368 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RCKXACKVZS;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter2UITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = ValueConverter2;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -575,15 +483,6 @@
 			buildConfigurations = (
 				5592877A2BD2FEFB001F2368 /* Debug */,
 				5592877B2BD2FEFB001F2368 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		5592877C2BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter2UITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5592877D2BD2FEFB001F2368 /* Debug */,
-				5592877E2BD2FEFB001F2368 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
