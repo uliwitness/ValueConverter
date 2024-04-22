@@ -12,8 +12,7 @@
 		559287592BD2FEFA001F2368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559287582BD2FEFA001F2368 /* Assets.xcassets */; };
 		5592875C2BD2FEFA001F2368 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5592875B2BD2FEFA001F2368 /* Preview Assets.xcassets */; };
 		559287672BD2FEFB001F2368 /* ValueConverter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */; };
-		559287802BD2FFF5001F2368 /* ByteConversion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592877F2BD2FFF5001F2368 /* ByteConversion.swift */; };
-		559287822BD31B0E001F2368 /* Int32View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287812BD31B0E001F2368 /* Int32View.swift */; };
+		559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */; };
 		559287862BD3E11F001F2368 /* ContentView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,8 +37,7 @@
 		559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2Tests.swift; sourceTree = "<group>"; };
 		559287702BD2FEFB001F2368 /* ValueConverter2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2UITests.swift; sourceTree = "<group>"; };
 		559287722BD2FEFB001F2368 /* ValueConverter2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2UITestsLaunchTests.swift; sourceTree = "<group>"; };
-		5592877F2BD2FFF5001F2368 /* ByteConversion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ByteConversion.swift; sourceTree = "<group>"; };
-		559287812BD31B0E001F2368 /* Int32View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int32View.swift; sourceTree = "<group>"; };
+		5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFormattingView.swift; sourceTree = "<group>"; };
 		559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -86,8 +84,7 @@
 				559287542BD2FEF8001F2368 /* ValueConverter2App.swift */,
 				559287562BD2FEF8001F2368 /* ContentView.swift */,
 				559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */,
-				5592877F2BD2FFF5001F2368 /* ByteConversion.swift */,
-				559287812BD31B0E001F2368 /* Int32View.swift */,
+				5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */,
 				559287582BD2FEFA001F2368 /* Assets.xcassets */,
 				5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */,
 				5592875A2BD2FEFA001F2368 /* Preview Content */,
@@ -222,8 +219,7 @@
 			files = (
 				559287862BD3E11F001F2368 /* ContentView+ViewModel.swift in Sources */,
 				559287572BD2FEF8001F2368 /* ContentView.swift in Sources */,
-				559287822BD31B0E001F2368 /* Int32View.swift in Sources */,
-				559287802BD2FFF5001F2368 /* ByteConversion.swift in Sources */,
+				559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */,
 				559287552BD2FEF8001F2368 /* ValueConverter2App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

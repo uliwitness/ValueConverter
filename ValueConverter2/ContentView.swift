@@ -9,8 +9,14 @@ struct ContentView: View {
                 .imageScale(.large)
                 .foregroundStyle(.tint)
             Text("Hello, world!")
-			Int32View(model: $model)
-			UInt32View(model: $model)
+			IntFormattingView<Int8>(placeholder: "Int8", model: $model)
+			IntFormattingView<UInt8>(placeholder: "UInt8", model: $model)
+			IntFormattingView<Int16>(placeholder: "Int16", model: $model)
+			IntFormattingView<UInt16>(placeholder: "UInt16", model: $model)
+			IntFormattingView<Int32>(placeholder: "Int32", model: $model)
+			IntFormattingView<UInt32>(placeholder: "UInt32", model: $model)
+			IntFormattingView<Int64>(placeholder: "Int64", model: $model)
+			IntFormattingView<UInt64>(placeholder: "UInt64", model: $model)
         }
         .padding()
     }

@@ -23,10 +23,11 @@ enum FormattingView {
 }
 
 struct IntFormattingView<T: FixedWidthInteger>: View {
+	let placeholder: String
 	@Binding var model: ContentView.ViewModel
 
 	var body: some View {
-		TextField("Int32", text: Binding(
+		TextField(placeholder, text: Binding(
 			get: {
 				let intValue: T = FormattingView.fromBytes(model.rawBytes)
 				return "\(intValue)"
