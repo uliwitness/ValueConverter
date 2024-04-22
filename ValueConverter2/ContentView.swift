@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct ContentView: View {
-	@Binding var model: ViewModel
+	@Binding var model: FormattingView.ViewModel
+	@State var intValue: Int = 42
 	
     var body: some View {
         VStack {
@@ -17,12 +18,13 @@ struct ContentView: View {
 			IntFormattingView<UInt32>(placeholder: "UInt32", model: $model)
 			IntFormattingView<Int64>(placeholder: "Int64", model: $model)
 			IntFormattingView<UInt64>(placeholder: "UInt64", model: $model)
+			TextField("NumberTest", value: $intValue, format: .number)
         }
         .padding()
     }
 }
 
 #Preview {
-	@State var model = ContentView.ViewModel()
+	@State var model = FormattingView.ViewModel()
     return ContentView(model: $model)
 }

@@ -13,7 +13,7 @@
 		5592875C2BD2FEFA001F2368 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5592875B2BD2FEFA001F2368 /* Preview Assets.xcassets */; };
 		559287672BD2FEFB001F2368 /* ValueConverter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */; };
 		559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */; };
-		559287862BD3E11F001F2368 /* ContentView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */; };
+		559287862BD3E11F001F2368 /* FormattingView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +35,8 @@
 		5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ValueConverter2.entitlements; sourceTree = "<group>"; };
 		559287622BD2FEFB001F2368 /* ValueConverter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueConverter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2Tests.swift; sourceTree = "<group>"; };
-		559287702BD2FEFB001F2368 /* ValueConverter2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2UITests.swift; sourceTree = "<group>"; };
-		559287722BD2FEFB001F2368 /* ValueConverter2UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFormattingView.swift; sourceTree = "<group>"; };
-		559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView+ViewModel.swift"; sourceTree = "<group>"; };
+		559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormattingView+ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +62,6 @@
 			children = (
 				559287532BD2FEF8001F2368 /* ValueConverter2 */,
 				559287652BD2FEFB001F2368 /* ValueConverter2Tests */,
-				5592876F2BD2FEFB001F2368 /* ValueConverter2UITests */,
 				559287522BD2FEF8001F2368 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -83,8 +80,8 @@
 			children = (
 				559287542BD2FEF8001F2368 /* ValueConverter2App.swift */,
 				559287562BD2FEF8001F2368 /* ContentView.swift */,
-				559287852BD3E11F001F2368 /* ContentView+ViewModel.swift */,
 				5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */,
+				559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */,
 				559287582BD2FEFA001F2368 /* Assets.xcassets */,
 				5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */,
 				5592875A2BD2FEFA001F2368 /* Preview Content */,
@@ -106,15 +103,6 @@
 				559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */,
 			);
 			path = ValueConverter2Tests;
-			sourceTree = "<group>";
-		};
-		5592876F2BD2FEFB001F2368 /* ValueConverter2UITests */ = {
-			isa = PBXGroup;
-			children = (
-				559287702BD2FEFB001F2368 /* ValueConverter2UITests.swift */,
-				559287722BD2FEFB001F2368 /* ValueConverter2UITestsLaunchTests.swift */,
-			);
-			path = ValueConverter2UITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +205,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559287862BD3E11F001F2368 /* ContentView+ViewModel.swift in Sources */,
+				559287862BD3E11F001F2368 /* FormattingView+ViewModel.swift in Sources */,
 				559287572BD2FEF8001F2368 /* ContentView.swift in Sources */,
 				559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */,
 				559287552BD2FEF8001F2368 /* ValueConverter2App.swift in Sources */,

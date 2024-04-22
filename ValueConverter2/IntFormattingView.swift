@@ -22,19 +22,22 @@ enum FormattingView {
 	
 }
 
-struct IntFormattingView<T: FixedWidthInteger>: View {
+struct IntFormattingView<T: LosslessStringConvertible & ExpressibleByIntegerLiteral>: View {
 	let placeholder: String
-	@Binding var model: ContentView.ViewModel
+	@Binding var model: FormattingView.ViewModel
 
 	var body: some View {
-		TextField(placeholder, text: Binding(
-			get: {
-				let intValue: T = FormattingView.fromBytes(model.rawBytes)
-				return "\(intValue)"
-			},
-			set: {
-				model.rawBytes = FormattingView.toBytes(T($0) ?? 0)
-			}
-		))
+		HStack {
+			Text(placeholder)
+			TextField(placeholder, text: Binding(
+				get: {
+					let intValue: T = FormattingView.fromBytes(model.rawBytes)
+					return "\(intValue)"
+				},
+				set: {
+					model.rawBytes = FormattingView.toBytes(T($0) ?? 0)
+				}
+			))
+		}
 	}
 }
