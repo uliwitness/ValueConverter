@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		559287552BD2FEF8001F2368 /* ValueConverter2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287542BD2FEF8001F2368 /* ValueConverter2App.swift */; };
+		559287552BD2FEF8001F2368 /* ValueConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287542BD2FEF8001F2368 /* ValueConverterApp.swift */; };
 		559287572BD2FEF8001F2368 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287562BD2FEF8001F2368 /* ContentView.swift */; };
 		559287592BD2FEFA001F2368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559287582BD2FEFA001F2368 /* Assets.xcassets */; };
 		5592875C2BD2FEFA001F2368 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5592875B2BD2FEFA001F2368 /* Preview Assets.xcassets */; };
-		559287672BD2FEFB001F2368 /* ValueConverter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */; };
+		559287672BD2FEFB001F2368 /* ValueConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287662BD2FEFB001F2368 /* ValueConverterTests.swift */; };
 		559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */; };
 		559287862BD3E11F001F2368 /* FormattingView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */; };
 		559287882BD83C11001F2368 /* StringFormattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287872BD83C11001F2368 /* StringFormattingView.swift */; };
@@ -23,19 +23,19 @@
 			containerPortal = 559287492BD2FEF8001F2368 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 559287502BD2FEF8001F2368;
-			remoteInfo = ValueConverter2;
+			remoteInfo = ValueConverter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		559287512BD2FEF8001F2368 /* ValueConverter2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueConverter2.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		559287542BD2FEF8001F2368 /* ValueConverter2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2App.swift; sourceTree = "<group>"; };
+		559287512BD2FEF8001F2368 /* ValueConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		559287542BD2FEF8001F2368 /* ValueConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverterApp.swift; sourceTree = "<group>"; };
 		559287562BD2FEF8001F2368 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		559287582BD2FEFA001F2368 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5592875B2BD2FEFA001F2368 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ValueConverter2.entitlements; sourceTree = "<group>"; };
-		559287622BD2FEFB001F2368 /* ValueConverter2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueConverter2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2Tests.swift; sourceTree = "<group>"; };
+		5592875D2BD2FEFA001F2368 /* ValueConverter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ValueConverter.entitlements; sourceTree = "<group>"; };
+		559287622BD2FEFB001F2368 /* ValueConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ValueConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		559287662BD2FEFB001F2368 /* ValueConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverterTests.swift; sourceTree = "<group>"; };
 		5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFormattingView.swift; sourceTree = "<group>"; };
 		559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormattingView+ViewModel.swift"; sourceTree = "<group>"; };
 		559287872BD83C11001F2368 /* StringFormattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormattingView.swift; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 		559287482BD2FEF8001F2368 = {
 			isa = PBXGroup;
 			children = (
-				559287532BD2FEF8001F2368 /* ValueConverter2 */,
-				559287652BD2FEFB001F2368 /* ValueConverter2Tests */,
+				559287532BD2FEF8001F2368 /* ValueConverter */,
+				559287652BD2FEFB001F2368 /* ValueConverterTests */,
 				559287522BD2FEF8001F2368 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,25 +71,25 @@
 		559287522BD2FEF8001F2368 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				559287512BD2FEF8001F2368 /* ValueConverter2.app */,
-				559287622BD2FEFB001F2368 /* ValueConverter2Tests.xctest */,
+				559287512BD2FEF8001F2368 /* ValueConverter.app */,
+				559287622BD2FEFB001F2368 /* ValueConverterTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		559287532BD2FEF8001F2368 /* ValueConverter2 */ = {
+		559287532BD2FEF8001F2368 /* ValueConverter */ = {
 			isa = PBXGroup;
 			children = (
-				559287542BD2FEF8001F2368 /* ValueConverter2App.swift */,
+				559287542BD2FEF8001F2368 /* ValueConverterApp.swift */,
 				559287562BD2FEF8001F2368 /* ContentView.swift */,
 				5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */,
 				559287872BD83C11001F2368 /* StringFormattingView.swift */,
 				559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */,
 				559287582BD2FEFA001F2368 /* Assets.xcassets */,
-				5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */,
+				5592875D2BD2FEFA001F2368 /* ValueConverter.entitlements */,
 				5592875A2BD2FEFA001F2368 /* Preview Content */,
 			);
-			path = ValueConverter2;
+			path = ValueConverter;
 			sourceTree = "<group>";
 		};
 		5592875A2BD2FEFA001F2368 /* Preview Content */ = {
@@ -100,20 +100,20 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		559287652BD2FEFB001F2368 /* ValueConverter2Tests */ = {
+		559287652BD2FEFB001F2368 /* ValueConverterTests */ = {
 			isa = PBXGroup;
 			children = (
-				559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */,
+				559287662BD2FEFB001F2368 /* ValueConverterTests.swift */,
 			);
-			path = ValueConverter2Tests;
+			path = ValueConverterTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		559287502BD2FEF8001F2368 /* ValueConverter2 */ = {
+		559287502BD2FEF8001F2368 /* ValueConverter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 559287762BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter2" */;
+			buildConfigurationList = 559287762BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter" */;
 			buildPhases = (
 				5592874D2BD2FEF8001F2368 /* Sources */,
 				5592874E2BD2FEF8001F2368 /* Frameworks */,
@@ -123,14 +123,14 @@
 			);
 			dependencies = (
 			);
-			name = ValueConverter2;
-			productName = ValueConverter2;
-			productReference = 559287512BD2FEF8001F2368 /* ValueConverter2.app */;
+			name = ValueConverter;
+			productName = ValueConverter;
+			productReference = 559287512BD2FEF8001F2368 /* ValueConverter.app */;
 			productType = "com.apple.product-type.application";
 		};
-		559287612BD2FEFB001F2368 /* ValueConverter2Tests */ = {
+		559287612BD2FEFB001F2368 /* ValueConverterTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 559287792BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter2Tests" */;
+			buildConfigurationList = 559287792BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverterTests" */;
 			buildPhases = (
 				5592875E2BD2FEFB001F2368 /* Sources */,
 				5592875F2BD2FEFB001F2368 /* Frameworks */,
@@ -141,9 +141,9 @@
 			dependencies = (
 				559287642BD2FEFB001F2368 /* PBXTargetDependency */,
 			);
-			name = ValueConverter2Tests;
-			productName = ValueConverter2Tests;
-			productReference = 559287622BD2FEFB001F2368 /* ValueConverter2Tests.xctest */;
+			name = ValueConverterTests;
+			productName = ValueConverterTests;
+			productReference = 559287622BD2FEFB001F2368 /* ValueConverterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -165,7 +165,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5592874C2BD2FEF8001F2368 /* Build configuration list for PBXProject "ValueConverter2" */;
+			buildConfigurationList = 5592874C2BD2FEF8001F2368 /* Build configuration list for PBXProject "ValueConverter" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -178,8 +178,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				559287502BD2FEF8001F2368 /* ValueConverter2 */,
-				559287612BD2FEFB001F2368 /* ValueConverter2Tests */,
+				559287502BD2FEF8001F2368 /* ValueConverter */,
+				559287612BD2FEFB001F2368 /* ValueConverterTests */,
 			);
 		};
 /* End PBXProject section */
@@ -212,7 +212,7 @@
 				559287862BD3E11F001F2368 /* FormattingView+ViewModel.swift in Sources */,
 				559287572BD2FEF8001F2368 /* ContentView.swift in Sources */,
 				559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */,
-				559287552BD2FEF8001F2368 /* ValueConverter2App.swift in Sources */,
+				559287552BD2FEF8001F2368 /* ValueConverterApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,7 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559287672BD2FEFB001F2368 /* ValueConverter2Tests.swift in Sources */,
+				559287672BD2FEFB001F2368 /* ValueConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,7 +229,7 @@
 /* Begin PBXTargetDependency section */
 		559287642BD2FEFB001F2368 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 559287502BD2FEF8001F2368 /* ValueConverter2 */;
+			target = 559287502BD2FEF8001F2368 /* ValueConverter */;
 			targetProxy = 559287632BD2FEFB001F2368 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -358,11 +358,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ValueConverter2/ValueConverter2.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ValueConverter/ValueConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ValueConverter2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ValueConverter/Preview Content\"";
 				DEVELOPMENT_TEAM = RCKXACKVZS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -372,8 +372,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter2;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -385,11 +385,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = ValueConverter2/ValueConverter2.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ValueConverter/ValueConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"ValueConverter2/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"ValueConverter/Preview Content\"";
 				DEVELOPMENT_TEAM = RCKXACKVZS;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -399,8 +399,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter2;
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -418,11 +418,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter2Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValueConverter2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ValueConverter2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValueConverter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ValueConverter";
 			};
 			name = Debug;
 		};
@@ -437,18 +437,18 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 14.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter2Tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverterTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValueConverter2.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ValueConverter2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ValueConverter.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ValueConverter";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5592874C2BD2FEF8001F2368 /* Build configuration list for PBXProject "ValueConverter2" */ = {
+		5592874C2BD2FEF8001F2368 /* Build configuration list for PBXProject "ValueConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				559287742BD2FEFB001F2368 /* Debug */,
@@ -457,7 +457,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		559287762BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter2" */ = {
+		559287762BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				559287772BD2FEFB001F2368 /* Debug */,
@@ -466,7 +466,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		559287792BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverter2Tests" */ = {
+		559287792BD2FEFB001F2368 /* Build configuration list for PBXNativeTarget "ValueConverterTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5592877A2BD2FEFB001F2368 /* Debug */,

@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct ValueConverter2App: App {
+struct ValueConverterApp: App {
 	@State var storage = FormattingView.ViewModel()
 	
     var body: some Scene {
