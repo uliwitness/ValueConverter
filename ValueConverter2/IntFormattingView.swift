@@ -22,7 +22,7 @@ enum FormattingView {
 	
 }
 
-struct IntFormattingView<T: LosslessStringConvertible & ExpressibleByIntegerLiteral>: View {
+struct IntFormattingView<T: LosslessStringConvertible & ExpressibleByIntegerLiteral & Equatable>: View {
 	let placeholder: String
 	@Binding var model: FormattingView.ViewModel
 
@@ -35,7 +35,11 @@ struct IntFormattingView<T: LosslessStringConvertible & ExpressibleByIntegerLite
 					return "\(intValue)"
 				},
 				set: {
-					model.rawBytes = FormattingView.toBytes(T($0) ?? 0)
+					let newValue = T($0) ?? 0
+					let oldValue: T = FormattingView.fromBytes(model.rawBytes)
+					if newValue != oldValue {
+						model.rawBytes = FormattingView.toBytes(newValue)
+					}
 				}
 			))
 		}

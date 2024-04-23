@@ -18,6 +18,10 @@ struct ContentView: View {
 			IntFormattingView<UInt32>(placeholder: "UInt32", model: $model)
 			IntFormattingView<Int64>(placeholder: "Int64", model: $model)
 			IntFormattingView<UInt64>(placeholder: "UInt64", model: $model)
+			StringFormattingView(placeholder: "UTF8", model: $model, encoding: .utf8)
+			StringFormattingView(placeholder: "MacRoman", model: $model, encoding: .macOSRoman)
+			StringFormattingView(placeholder: "Windows Latin", model: $model, encoding: .windowsCP1252)
+			StringFormattingView(placeholder: "ShiftJIS", model: $model, encoding: .shiftJIS)
 			TextField("NumberTest", value: $intValue, format: .number)
         }
         .padding()

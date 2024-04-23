@@ -14,6 +14,7 @@
 		559287672BD2FEFB001F2368 /* ValueConverter2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */; };
 		559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */; };
 		559287862BD3E11F001F2368 /* FormattingView+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */; };
+		559287882BD83C11001F2368 /* StringFormattingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287872BD83C11001F2368 /* StringFormattingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		559287662BD2FEFB001F2368 /* ValueConverter2Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverter2Tests.swift; sourceTree = "<group>"; };
 		5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntFormattingView.swift; sourceTree = "<group>"; };
 		559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormattingView+ViewModel.swift"; sourceTree = "<group>"; };
+		559287872BD83C11001F2368 /* StringFormattingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringFormattingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 				559287542BD2FEF8001F2368 /* ValueConverter2App.swift */,
 				559287562BD2FEF8001F2368 /* ContentView.swift */,
 				5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */,
+				559287872BD83C11001F2368 /* StringFormattingView.swift */,
 				559287852BD3E11F001F2368 /* FormattingView+ViewModel.swift */,
 				559287582BD2FEFA001F2368 /* Assets.xcassets */,
 				5592875D2BD2FEFA001F2368 /* ValueConverter2.entitlements */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				559287882BD83C11001F2368 /* StringFormattingView.swift in Sources */,
 				559287862BD3E11F001F2368 /* FormattingView+ViewModel.swift in Sources */,
 				559287572BD2FEF8001F2368 /* ContentView.swift in Sources */,
 				559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */,
