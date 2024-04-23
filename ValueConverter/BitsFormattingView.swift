@@ -29,12 +29,10 @@ struct BitsFormattingView: View {
 	}
 	
 	var body: some View {
-		HStack {
-			Text(placeholder)
+		LabeledContent("Bits") {
 			VStack {
 				HStack {
 					ForEach(0..<4) { byteIndexUnflipped in
-						Spacer(minLength: 20.0)
 						let byteIndex = 3 - byteIndexUnflipped
 						ForEach(0..<8) { bitIndex in
 							Toggle("", isOn: Binding(
@@ -52,6 +50,7 @@ struct BitsFormattingView: View {
 							))
 							.toggleStyle(.checkbox)
 						}
+						Spacer(minLength: 20.0)
 					}
 				}
 			}

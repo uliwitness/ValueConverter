@@ -51,21 +51,18 @@ struct IntFormattingView<T: LosslessStringConvertible & ExpressibleByIntegerLite
 	@Binding var model: FormattingView.ViewModel
 	
 	var body: some View {
-		HStack {
-			Text(placeholder)
-			TextField(placeholder, text: Binding(
-				get: {
-					let intValue: T = FormattingView.fromBytes(model.rawBytes)
-					return "\(intValue)"
-				},
-				set: {
-					let newValue = T($0) ?? 0
-					let oldValue: T = FormattingView.fromBytes(model.rawBytes)
-					if newValue != oldValue {
-						model.rawBytes = FormattingView.toBytes(newValue)
-					}
+		TextField(placeholder, text: Binding(
+			get: {
+				let intValue: T = FormattingView.fromBytes(model.rawBytes)
+				return "\(intValue)"
+			},
+			set: {
+				let newValue = T($0) ?? 0
+				let oldValue: T = FormattingView.fromBytes(model.rawBytes)
+				if newValue != oldValue {
+					model.rawBytes = FormattingView.toBytes(newValue)
 				}
-			))
-		}
+			}
+		))
 	}
 }
