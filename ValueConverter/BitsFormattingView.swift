@@ -35,7 +35,7 @@ struct BitsFormattingView: View {
 					ForEach(0..<4) { byteIndexUnflipped in
 						let byteIndex = 3 - byteIndexUnflipped
 						ForEach(0..<8) { bitIndex in
-							Toggle("", isOn: Binding(
+							Toggle("\((byteIndex * 8) + (7 - bitIndex))", isOn: Binding(
 								get: {
 									let byte = model.rawBytes[safe: byteIndex] ?? 0
 									return (byte & bit(from: bitIndex)) == bit(from: bitIndex)
