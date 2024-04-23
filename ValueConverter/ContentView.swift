@@ -22,6 +22,7 @@ struct ContentView: View {
 			StringFormattingView(placeholder: "MacRoman", model: $model, encoding: .macOSRoman)
 			StringFormattingView(placeholder: "Windows Latin", model: $model, encoding: .windowsCP1252)
 			StringFormattingView(placeholder: "ShiftJIS", model: $model, encoding: .shiftJIS)
+			HexFormattingView(placeholder: "Hex", model: $model)
 		}
 		.padding()
 	}
