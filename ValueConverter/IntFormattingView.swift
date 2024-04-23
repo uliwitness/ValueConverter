@@ -25,7 +25,7 @@ enum FormattingView {
 struct IntFormattingView<T: LosslessStringConvertible & ExpressibleByIntegerLiteral & Equatable>: View {
 	let placeholder: String
 	@Binding var model: FormattingView.ViewModel
-
+	
 	var body: some View {
 		HStack {
 			Text(placeholder)

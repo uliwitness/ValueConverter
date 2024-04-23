@@ -4,9 +4,9 @@ import SwiftUI
 struct ValueConverterApp: App {
 	@State var storage = FormattingView.ViewModel()
 	
-    var body: some Scene {
-        WindowGroup {
-            ContentView(model: $storage)
-        }
-    }
+	var body: some Scene {
+		WindowGroup {
+			ContentView(model: $storage)
+		}
+	}
 }

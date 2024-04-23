@@ -4,12 +4,12 @@ struct ContentView: View {
 	@Binding var model: FormattingView.ViewModel
 	@State var intValue: Int = 42
 	
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+	var body: some View {
+		VStack {
+			Image(systemName: "globe")
+				.imageScale(.large)
+				.foregroundStyle(.tint)
+			Text("Hello, world!")
 			IntFormattingView<Int8>(placeholder: "Int8", model: $model)
 			IntFormattingView<UInt8>(placeholder: "UInt8", model: $model)
 			IntFormattingView<Int16>(placeholder: "Int16", model: $model)
@@ -23,12 +23,12 @@ struct ContentView: View {
 			StringFormattingView(placeholder: "Windows Latin", model: $model, encoding: .windowsCP1252)
 			StringFormattingView(placeholder: "ShiftJIS", model: $model, encoding: .shiftJIS)
 			TextField("NumberTest", value: $intValue, format: .number)
-        }
-        .padding()
-    }
+		}
+		.padding()
+	}
 }
 
 #Preview {
 	@State var model = FormattingView.ViewModel()
-    return ContentView(model: $model)
+	return ContentView(model: $model)
 }

@@ -5,7 +5,7 @@ struct StringFormattingView: View {
 	let placeholder: String
 	@Binding var model: FormattingView.ViewModel
 	let encoding: String.Encoding
-
+	
 	var body: some View {
 		HStack {
 			Text(placeholder)
@@ -13,8 +13,7 @@ struct StringFormattingView: View {
 				get: {
 					return String(bytes: model.rawBytes, encoding: encoding) ?? ""
 				},
-				set: {
-					let newValue = $0
+				set: { newValue in
 					let oldValue = String(bytes: model.rawBytes, encoding: encoding) ?? ""
 					if newValue != oldValue {
 						let encodedData = newValue.data(using: encoding) ?? Data()

@@ -67,6 +67,8 @@
 				559287522BD2FEF8001F2368 /* Products */,
 			);
 			sourceTree = "<group>";
+			tabWidth = 4;
+			usesTabs = 1;
 		};
 		559287522BD2FEF8001F2368 /* Products */ = {
 			isa = PBXGroup;
