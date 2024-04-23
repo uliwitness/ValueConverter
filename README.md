@@ -4,6 +4,8 @@ ValueConverter 2.x
 Ground-up rewrite of my old tool for viewing a bunch of bytes as different data types
 in SwiftUI for modern MacOS X.
 
+![Screen shot of the ValueConverter app's main window.](value_converter_screenshot.png)
+
 ## License
 
     © Copyright Uli Kusterer 2024, All rights reserved.
