@@ -61,10 +61,14 @@ struct BitView: View {
 		return 1 << (7 - reverseBitIndex)
 	}
 	
+	private func padded(_ title: String) -> String {
+		return (title.count < 2) ? title + " " : title // Figure space, the width of a number.
+	}
+
 	var body: some View {
 		HStack {
 			ForEach(0..<8) { bitIndex in
-				Toggle("\((byteIndex * 8) + (7 - bitIndex))", isOn: Binding(
+				Toggle(padded("\((byteIndex * 8) + (7 - bitIndex))"), isOn: Binding(
 					get: {
 						let byte = model.rawBytes[safe: byteIndex] ?? 0
 						return (byte & bit(from: bitIndex)) == bit(from: bitIndex)
@@ -78,6 +82,8 @@ struct BitView: View {
 					}
 				))
 				.toggleStyle(.checkbox)
+				.monospacedDigit()
+				.lineLimit(1)
 			}
 		}
 	}
