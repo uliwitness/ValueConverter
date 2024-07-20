@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5552E0462C4BC63400CBD8B8 /* Endianness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5552E0452C4BC63400CBD8B8 /* Endianness.swift */; };
 		559287552BD2FEF8001F2368 /* ValueConverterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287542BD2FEF8001F2368 /* ValueConverterApp.swift */; };
 		559287572BD2FEF8001F2368 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559287562BD2FEF8001F2368 /* ContentView.swift */; };
 		559287592BD2FEFA001F2368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 559287582BD2FEFA001F2368 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5552E0452C4BC63400CBD8B8 /* Endianness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endianness.swift; sourceTree = "<group>"; };
 		559287512BD2FEF8001F2368 /* ValueConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ValueConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		559287542BD2FEF8001F2368 /* ValueConverterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValueConverterApp.swift; sourceTree = "<group>"; };
 		559287562BD2FEF8001F2368 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			children = (
 				559287542BD2FEF8001F2368 /* ValueConverterApp.swift */,
 				559287562BD2FEF8001F2368 /* ContentView.swift */,
+				5552E0452C4BC63400CBD8B8 /* Endianness.swift */,
 				5592877F2BD2FFF5001F2368 /* IntFormattingView.swift */,
 				559287872BD83C11001F2368 /* StringFormattingView.swift */,
 				55E854DE2BD84E02004C22BB /* HexFormattingView.swift */,
@@ -219,6 +222,7 @@
 				559287882BD83C11001F2368 /* StringFormattingView.swift in Sources */,
 				559287862BD3E11F001F2368 /* FormattingView+ViewModel.swift in Sources */,
 				559287572BD2FEF8001F2368 /* ContentView.swift in Sources */,
+				5552E0462C4BC63400CBD8B8 /* Endianness.swift in Sources */,
 				55E854E12BD85116004C22BB /* BitsFormattingView.swift in Sources */,
 				559287802BD2FFF5001F2368 /* IntFormattingView.swift in Sources */,
 				559287552BD2FEF8001F2368 /* ValueConverterApp.swift in Sources */,
@@ -368,6 +372,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ValueConverter/ValueConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -382,7 +387,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -395,6 +400,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ValueConverter/ValueConverter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -409,7 +415,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 2.0;
+				MARKETING_VERSION = 2.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.thevoidsoftware.ValueConverter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

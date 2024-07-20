@@ -46,23 +46,42 @@ enum FormattingView {
 	
 }
 
-struct IntFormattingView<T: LosslessStringConvertible & ExpressibleByIntegerLiteral & Equatable>: View {
+struct IntFormattingView<T: FixedWidthInteger & ExpressibleByIntegerLiteral & Equatable>: View {
 	let placeholder: String
+	let endianness: Endianness
 	@Binding var model: FormattingView.ViewModel
 	
 	var body: some View {
 		TextField(placeholder, text: Binding(
 			get: {
 				let intValue: T = FormattingView.fromBytes(model.rawBytes)
-				return "\(intValue)"
+				switch endianness {
+				case .machineByteOrder:
+					return "\(intValue)"
+				case .littleEndian:
+					return "\(intValue.littleEndian)"
+				case .bigEndian:
+					return "\(intValue.bigEndian)"
+				}
 			},
 			set: {
-				let newValue = T($0) ?? 0
+				let newValue: T = decodeInt($0, endianness: endianness)
 				let oldValue: T = FormattingView.fromBytes(model.rawBytes)
 				if newValue != oldValue {
 					model.rawBytes = FormattingView.toBytes(newValue)
 				}
 			}
 		))
+	}
+}
+
+func decodeInt<T: FixedWidthInteger>(_ value: String, endianness: Endianness) -> T {
+	switch endianness {
+	case .machineByteOrder:
+		return T(value) ?? 0
+	case .littleEndian:
+		return T(littleEndian: T(value) ?? 0)
+	case .bigEndian:
+		return T(bigEndian: T(value) ?? 0)
 	}
 }
