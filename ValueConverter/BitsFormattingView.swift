@@ -27,26 +27,14 @@ struct BitsFormattingView: View {
 	var body: some View {
 		LabeledContent("Bits") {
 			VStack {
-				HStack {
-					BitView(model: $model, byteIndex: 1)
-					Spacer(minLength: 20.0)
-					BitView(model: $model, byteIndex: 0)
-				}
-				HStack {
-					BitView(model: $model, byteIndex: 3)
-					Spacer(minLength: 20.0)
-					BitView(model: $model, byteIndex: 2)
-				}
-				HStack {
-					BitView(model: $model, byteIndex: 5)
-					Spacer(minLength: 20.0)
-					BitView(model: $model, byteIndex: 4)
-				}
-				HStack {
-					BitView(model: $model, byteIndex: 7)
-					Spacer(minLength: 20.0)
-					BitView(model: $model, byteIndex: 6)
-				}
+				BitView(model: $model, byteIndex: 0)
+				BitView(model: $model, byteIndex: 1)
+				BitView(model: $model, byteIndex: 2)
+				BitView(model: $model, byteIndex: 3)
+				BitView(model: $model, byteIndex: 4)
+				BitView(model: $model, byteIndex: 5)
+				BitView(model: $model, byteIndex: 6)
+				BitView(model: $model, byteIndex: 7)
 			}
 		}
 	}
@@ -84,6 +72,7 @@ struct BitView: View {
 				.toggleStyle(.checkbox)
 				.monospacedDigit()
 				.lineLimit(1)
+				.fixedSize()
 			}
 		}
 	}
