@@ -55,6 +55,7 @@ enum FormattingView {
 struct IntFormattingView<T: FixedWidthInteger & ExpressibleByIntegerLiteral & Equatable>: View {
 	let placeholder: String
 	let endianness: Endianness
+	let radix: Int = 10
 	@Binding var model: FormattingView.ViewModel
 	
 	var body: some View {
@@ -63,15 +64,15 @@ struct IntFormattingView<T: FixedWidthInteger & ExpressibleByIntegerLiteral & Eq
 				let intValue: T = FormattingView.fromBytes(model.rawBytes)
 				switch endianness {
 				case .machineByteOrder:
-					return "\(intValue)"
+					return String(intValue, radix: radix, uppercase: false)
 				case .littleEndian:
-					return "\(intValue.littleEndian)"
+					return String(intValue.littleEndian, radix: radix, uppercase: false)
 				case .bigEndian:
-					return "\(intValue.bigEndian)"
+					return String(intValue.bigEndian, radix: radix, uppercase: false)
 				}
 			},
 			set: {
-				let newValue: T = decodeInt($0, endianness: endianness)
+				let newValue: T = decodeInt($0, radix: radix, endianness: endianness)
 				let oldValue: T = FormattingView.fromBytes(model.rawBytes)
 				if newValue != oldValue {
 					model.rawBytes = FormattingView.toBytes(newValue)
@@ -81,13 +82,13 @@ struct IntFormattingView<T: FixedWidthInteger & ExpressibleByIntegerLiteral & Eq
 	}
 }
 
-func decodeInt<T: FixedWidthInteger>(_ value: String, endianness: Endianness) -> T {
+func decodeInt<T: FixedWidthInteger>(_ value: String, radix: Int, endianness: Endianness) -> T {
 	switch endianness {
 	case .machineByteOrder:
-		return T(value) ?? 0
+		return T(value, radix: radix) ?? 0
 	case .littleEndian:
-		return T(littleEndian: T(value) ?? 0)
+		return T(littleEndian: T(value, radix: radix) ?? 0)
 	case .bigEndian:
-		return T(bigEndian: T(value) ?? 0)
+		return T(bigEndian: T(value, radix: radix) ?? 0)
 	}
 }
