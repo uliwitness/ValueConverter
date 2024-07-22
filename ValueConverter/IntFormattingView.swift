@@ -1,6 +1,8 @@
 import Foundation
 import SwiftUI
 
+private let radixesToPrefixes = [16: "0x", 8: "0o", 2: "0b"]
+
 enum FormattingView {
 	
 	static func toBytes<T>(_ value: T) -> [UInt8] {
@@ -55,20 +57,21 @@ enum FormattingView {
 struct IntFormattingView<T: FixedWidthInteger & ExpressibleByIntegerLiteral & Equatable>: View {
 	let placeholder: String
 	let endianness: Endianness
-	let radix: Int = 10
+	let radix: Int
 	@Binding var model: FormattingView.ViewModel
 	
 	var body: some View {
 		TextField(placeholder, text: Binding(
 			get: {
 				let intValue: T = FormattingView.fromBytes(model.rawBytes)
+				let prefix = radixesToPrefixes[radix] ?? ""
 				switch endianness {
 				case .machineByteOrder:
-					return String(intValue, radix: radix, uppercase: false)
+					return prefix + String(intValue, radix: radix, uppercase: false)
 				case .littleEndian:
-					return String(intValue.littleEndian, radix: radix, uppercase: false)
+					return prefix + String(intValue.littleEndian, radix: radix, uppercase: false)
 				case .bigEndian:
-					return String(intValue.bigEndian, radix: radix, uppercase: false)
+					return prefix + String(intValue.bigEndian, radix: radix, uppercase: false)
 				}
 			},
 			set: {
@@ -83,12 +86,17 @@ struct IntFormattingView<T: FixedWidthInteger & ExpressibleByIntegerLiteral & Eq
 }
 
 func decodeInt<T: FixedWidthInteger>(_ value: String, radix: Int, endianness: Endianness) -> T {
+	var valueToParse = value
+	if let prefix = radixesToPrefixes[radix],
+		let prefixRange = valueToParse.range(of: prefix) {
+		valueToParse.removeSubrange(prefixRange)
+	}
 	switch endianness {
 	case .machineByteOrder:
-		return T(value, radix: radix) ?? 0
+		return T(valueToParse, radix: radix) ?? 0
 	case .littleEndian:
-		return T(littleEndian: T(value, radix: radix) ?? 0)
+		return T(littleEndian: T(valueToParse, radix: radix) ?? 0)
 	case .bigEndian:
-		return T(bigEndian: T(value, radix: radix) ?? 0)
+		return T(bigEndian: T(valueToParse, radix: radix) ?? 0)
 	}
 }
