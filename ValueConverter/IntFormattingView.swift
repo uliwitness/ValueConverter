@@ -22,11 +22,20 @@ enum FormattingView {
 	
 	static func fromHexToBytes(_ hexString: String) -> [UInt8] {
 		var hexStringToParse = hexString
-		if (hexString.count % 2) != 0 {
+		while let paddingRange = hexStringToParse.rangeOfCharacter(from: CharacterSet(charactersIn: " \t\r\n'‘’.,_")) {
+			hexStringToParse.removeSubrange(paddingRange)
+		}
+		if let prefixRange = hexStringToParse.range(of: "0x") {
+			hexStringToParse.removeSubrange(prefixRange)
+		}
+		if let prefixRange = hexStringToParse.range(of: "0X") {
+			hexStringToParse.removeSubrange(prefixRange)
+		}
+		if (hexStringToParse.count % 2) != 0 {
 			hexStringToParse += "0"
 		}
 		var bytes = [UInt8]()
-		var currIndex = hexString.startIndex
+		var currIndex = hexStringToParse.startIndex
 		while currIndex < hexStringToParse.endIndex {
 			let nextIndex = hexStringToParse.index(currIndex, offsetBy: 2)
 			let hexByteStr = hexStringToParse[currIndex..<nextIndex]

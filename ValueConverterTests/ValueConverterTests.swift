@@ -21,6 +21,16 @@ final class ValueConverterTests: XCTestCase {
 		let paddedBytes: [UInt8] = [0x01, 0x02, 0x20, 0x20]
 		XCTAssertEqual(FormattingView.fromHexToBytes("0102202"), paddedBytes)
 
+		XCTAssertEqual(FormattingView.fromHexToBytes("0x0102202"), paddedBytes)
+		
+		XCTAssertEqual(FormattingView.fromHexToBytes("01'02'202"), paddedBytes)
+		
+		XCTAssertEqual(FormattingView.fromHexToBytes("01 02 202"), paddedBytes)
+		
+		XCTAssertEqual(FormattingView.fromHexToBytes("01,02.202"), paddedBytes)
+		
+		XCTAssertEqual(FormattingView.fromHexToBytes("01_02_202"), paddedBytes)
+
 		XCTAssertEqual(FormattingView.fromHexToBytes(""), [])
 	}
 	
