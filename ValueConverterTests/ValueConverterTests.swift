@@ -23,6 +23,8 @@ final class ValueConverterTests: XCTestCase {
 
 		XCTAssertEqual(FormattingView.fromHexToBytes("0x0102202"), paddedBytes)
 		
+		XCTAssertEqual(FormattingView.fromHexToBytes("0X01022021"), bytes)
+
 		XCTAssertEqual(FormattingView.fromHexToBytes("01'02'202"), paddedBytes)
 		
 		XCTAssertEqual(FormattingView.fromHexToBytes("01 02 202"), paddedBytes)
@@ -32,6 +34,11 @@ final class ValueConverterTests: XCTestCase {
 		XCTAssertEqual(FormattingView.fromHexToBytes("01_02_202"), paddedBytes)
 
 		XCTAssertEqual(FormattingView.fromHexToBytes(""), [])
+		
+		XCTAssertEqual(FormattingView.fromHexToBytes("0x"), [])
+
+		XCTAssertEqual(FormattingView.fromHexToBytes("'_."), [])
+
 	}
 	
 }

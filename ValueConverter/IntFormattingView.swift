@@ -25,10 +25,7 @@ enum FormattingView {
 		while let paddingRange = hexStringToParse.rangeOfCharacter(from: CharacterSet(charactersIn: " \t\r\n'‘’.,_")) {
 			hexStringToParse.removeSubrange(paddingRange)
 		}
-		if let prefixRange = hexStringToParse.range(of: "0x") {
-			hexStringToParse.removeSubrange(prefixRange)
-		}
-		if let prefixRange = hexStringToParse.range(of: "0X") {
+		if let prefixRange = hexStringToParse.range(of: "0x",options: .caseInsensitive) {
 			hexStringToParse.removeSubrange(prefixRange)
 		}
 		if (hexStringToParse.count % 2) != 0 {
